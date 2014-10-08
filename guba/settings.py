@@ -20,7 +20,7 @@ NEWSPIDER_MODULE = 'guba.spiders'
 
 # The amount of time (in secs) that the downloader should wait 
 # before downloading consecutive pages from the same spider
-DOWNLOAD_DELAY = 0.5 # 50 ms of delay
+DOWNLOAD_DELAY = 1 # 50 ms of delay
 
 # If enabled, Scrapy will wait a random amount of time 
 # (between 0.5 and 1.5 * DOWNLOAD_DELAY) while fetching requests 
