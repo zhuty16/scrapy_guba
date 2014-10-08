@@ -60,18 +60,7 @@ class GubaStockSpider(BaseSpider):
             else:
                 stockholder = ''
 
-            try:
-                post_title = re.search(r'title=\"(.*?)\"', item_soup).group(1).decode('utf8')
-                fw = open('test1.txt', 'w')
-                fw.write('%s\n' % item_soup)
-                fw.close()
-            except Exception, e:
-                fw = open('test.txt', 'w')
-                fw.write('%s\n' % e)
-                fw.write('%s\n' % item_soup)
-                fw.close()
-                #log.msg(e)
-                #log.msg(item_soup)
+            post_title = re.search(r'title="(.*?)"', item_soup).group(1).decode('utf8')
 
             lastReplyTime = re.search(r'"l5">(.*?)<', item_soup).group(1)
 
